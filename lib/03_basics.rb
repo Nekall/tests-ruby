@@ -28,10 +28,6 @@ end
 
 def magic_array(arr)
   arr.flatten!
-
-  return arr
+  arr2 = arr.map{ |x| x*2}
+  return arr2.select{|x| x%3 != 0}.uniq.sort
 end
-
-
-#arr.flatten.uniq!.inject(:*,2).delete_it(%3)''
-#arr.flatten.delete_if{ |x| x == % 3 }
